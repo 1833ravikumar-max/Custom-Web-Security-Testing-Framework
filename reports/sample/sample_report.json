@@ -1,0 +1,88 @@
+{
+  "target": "http://127.0.0.1:5077/vulnerabilities/xss_r/",
+  "scan_date": "2026-07-17 09:05:47 UTC",
+  "modules_executed": [
+    "xss"
+  ],
+  "vulnerabilities_found": [
+    {
+      "vulnerability_type": "Reflected XSS",
+      "parameter": "name",
+      "method": "GET (form)",
+      "payload_type": "basic_script_tag",
+      "encoding_variant": "raw",
+      "severity": "High",
+      "evidence": "ue=\"Submit\">     </form>     <pre>Hello <script>/*xssb9d513cf*/</script></pre></body></html>",
+      "location": "http://127.0.0.1:5077/vulnerabilities/xss_r/?name=%3Cscript%3E%2F%2Axssb9d513cf%2A%2F%3C%2Fscript%3E",
+      "remediation": "Encode all user-supplied output for the context it is rendered in (HTML entity encoding for HTML body, attribute encoding for HTML attributes, JS string encoding for inline scripts). Apply a strict Content-Security-Policy, validate input server-side, and use a templating engine with auto-escaping enabled by default."
+    },
+    {
+      "vulnerability_type": "Reflected XSS",
+      "parameter": "name",
+      "method": "GET (form)",
+      "payload_type": "img_onerror",
+      "encoding_variant": "raw",
+      "severity": "High",
+      "evidence": "ue=\"Submit\">     </form>     <pre>Hello <img src=x onerror=alert(\"xssb9d513cf\")></pre></body></html>",
+      "location": "http://127.0.0.1:5077/vulnerabilities/xss_r/?name=%3Cimg+src%3Dx+onerror%3Dalert%28%22xssb9d513cf%22%29%3E",
+      "remediation": "Encode all user-supplied output for the context it is rendered in (HTML entity encoding for HTML body, attribute encoding for HTML attributes, JS string encoding for inline scripts). Apply a strict Content-Security-Policy, validate input server-side, and use a templating engine with auto-escaping enabled by default."
+    },
+    {
+      "vulnerability_type": "Reflected XSS",
+      "parameter": "name",
+      "method": "GET (form)",
+      "payload_type": "svg_onload",
+      "encoding_variant": "raw",
+      "severity": "High",
+      "evidence": "ue=\"Submit\">     </form>     <pre>Hello <svg onload=alert(\"xssb9d513cf\")></pre></body></html>",
+      "location": "http://127.0.0.1:5077/vulnerabilities/xss_r/?name=%3Csvg+onload%3Dalert%28%22xssb9d513cf%22%29%3E",
+      "remediation": "Encode all user-supplied output for the context it is rendered in (HTML entity encoding for HTML body, attribute encoding for HTML attributes, JS string encoding for inline scripts). Apply a strict Content-Security-Policy, validate input server-side, and use a templating engine with auto-escaping enabled by default."
+    },
+    {
+      "vulnerability_type": "Reflected XSS",
+      "parameter": "name",
+      "method": "GET (form)",
+      "payload_type": "attribute_breakout",
+      "encoding_variant": "raw",
+      "severity": "High",
+      "evidence": "ue=\"Submit\">     </form>     <pre>Hello \"><b>xssb9d513cf</b></pre></body></html>",
+      "location": "http://127.0.0.1:5077/vulnerabilities/xss_r/?name=%22%3E%3Cb%3Exssb9d513cf%3C%2Fb%3E",
+      "remediation": "Encode all user-supplied output for the context it is rendered in (HTML entity encoding for HTML body, attribute encoding for HTML attributes, JS string encoding for inline scripts). Apply a strict Content-Security-Policy, validate input server-side, and use a templating engine with auto-escaping enabled by default."
+    },
+    {
+      "vulnerability_type": "Reflected XSS",
+      "parameter": "name",
+      "method": "GET (form)",
+      "payload_type": "single_quote_breakout",
+      "encoding_variant": "raw",
+      "severity": "High",
+      "evidence": "ue=\"Submit\">     </form>     <pre>Hello '><b>xssb9d513cf</b></pre></body></html>",
+      "location": "http://127.0.0.1:5077/vulnerabilities/xss_r/?name=%27%3E%3Cb%3Exssb9d513cf%3C%2Fb%3E",
+      "remediation": "Encode all user-supplied output for the context it is rendered in (HTML entity encoding for HTML body, attribute encoding for HTML attributes, JS string encoding for inline scripts). Apply a strict Content-Security-Policy, validate input server-side, and use a templating engine with auto-escaping enabled by default."
+    },
+    {
+      "vulnerability_type": "Reflected XSS",
+      "parameter": "name",
+      "method": "GET (form)",
+      "payload_type": "angle_bracket_only",
+      "encoding_variant": "raw",
+      "severity": "High",
+      "evidence": "ue=\"Submit\">     </form>     <pre>Hello <xssb9d513cf></pre></body></html>",
+      "location": "http://127.0.0.1:5077/vulnerabilities/xss_r/?name=%3Cxssb9d513cf%3E",
+      "remediation": "Encode all user-supplied output for the context it is rendered in (HTML entity encoding for HTML body, attribute encoding for HTML attributes, JS string encoding for inline scripts). Apply a strict Content-Security-Policy, validate input server-side, and use a templating engine with auto-escaping enabled by default."
+    },
+    {
+      "vulnerability_type": "Reflected XSS",
+      "parameter": "name",
+      "method": "GET (form)",
+      "payload_type": "html_comment_marker",
+      "encoding_variant": "raw",
+      "severity": "High",
+      "evidence": "ue=\"Submit\">     </form>     <pre>Hello <!--xssb9d513cf--></pre></body></html>",
+      "location": "http://127.0.0.1:5077/vulnerabilities/xss_r/?name=%3C%21--xssb9d513cf--%3E",
+      "remediation": "Encode all user-supplied output for the context it is rendered in (HTML entity encoding for HTML body, attribute encoding for HTML attributes, JS string encoding for inline scripts). Apply a strict Content-Security-Policy, validate input server-side, and use a templating engine with auto-escaping enabled by default."
+    }
+  ],
+  "total_findings": 7,
+  "overall_risk_rating": "High"
+}

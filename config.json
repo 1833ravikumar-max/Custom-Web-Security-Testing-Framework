@@ -1,0 +1,5 @@
+{
+  "format": "both",
+  "output_dir": "reports",
+  "timeout": 10
+}

@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Editors and operating systems
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Temporary integration files
+auth_disclosure_pack/
+authentication_information_disclosure_modules.zip
+original-submissions/
+*.zip
+
+# Generated scan reports
+reports/*.html
+reports/*.json
+
+# Keep sample reports
+!reports/sample_report.html
+!reports/sample_report.json
+!reports/.gitkeep
