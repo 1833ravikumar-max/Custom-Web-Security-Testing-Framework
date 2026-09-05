@@ -72,7 +72,7 @@ The framework does not perform destructive exploitation, database modification, 
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/abdullahcyberx/Custom-Web-Security-Testing-Framework.git
+git clone https://github.com/1833ravikumar-max/Custom-Web-Security-Testing-Framework.git
 cd Custom-Web-Security-Testing-Framework
 ```
 
