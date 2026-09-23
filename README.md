@@ -406,8 +406,8 @@ Automated findings should always be manually verified before being treated as co
 
 Developed as part of the **ITSOLERA Summer Internship 2026 — Offensive Security Task 2**.
 
-**Repository owner and maintainer:** Muhammad Abdullah
-**GitHub:** [abdullahcyberx](https://github.com/abdullahcyberx)
+**Repository owner and maintainer:** Ravi Kumar
+**GitHub:** (https://github.com/1833ravikumar-max/Custom-Web-Security-Testing-Framework)
 
 This project was developed collaboratively by the internship team. Contributions should be properly attributed through Git commits and pull requests.
 
